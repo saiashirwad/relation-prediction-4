@@ -61,7 +61,7 @@ class RotAtte(Model):
         return self.rotate(data, ent_embed, rel_embed)
 
     def predict(self, data):
-        score = self.rotate(data, self.ent_embed, self.rel_embed) 
+        score = - self.rotate(data, self.ent_embed, self.rel_embed) 
         return score.cpu().data.numpy()
 
 
