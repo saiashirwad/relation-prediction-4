@@ -72,7 +72,7 @@ def run_experiment(negative_rate, in_dim, out_dim, alpha):
     )
 
     trainer = Trainer(model = model, data_loader = train_dataloader, 
-        train_times = 1000, alpha = alpha, use_gpu = True, opt_method = "adam")
+        train_times = 100, alpha = alpha, use_gpu = True, opt_method = "adam")
 
     trainer.run()
     tester = Tester(model = rotatte, data_loader = test_dataloader, use_gpu = True)
