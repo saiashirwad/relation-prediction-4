@@ -1,0 +1,1 @@
+{"negative_rate": 10, "in_dim": 100, "out_dim": 100, "dataset": "WN18RR", "batch_size": 10000, "sampling_mode": "cross", "n_heads": 5, "n_layers": 2, "opt_method": "adam", "scatter": true, "lrs": [[0.002, 200]], "result": [0.24238675832748413, 8017.4130859375, 0.3720484972000122, 0.2846202850341797, 0.17310146987438202]}

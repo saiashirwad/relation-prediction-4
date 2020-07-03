@@ -1,0 +1,1 @@
+{"negative_rate": 10, "in_dim": 100, "out_dim": 100, "dataset": "FB15K237", "batch_size": 10000, "sampling_mode": "cross", "n_heads": 2, "n_layers": 1, "opt_method": "adam", "scatter": true, "lrs": [[0.0002, 100], [2e-05, 1000]], "result": [0.17673154175281525, 403.1116943359375, 0.3413710594177246, 0.19637447595596313, 0.09606176614761353]}

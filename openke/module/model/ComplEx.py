@@ -2,8 +2,9 @@ import torch
 import torch.nn as nn
 from .Model import Model
 
+
 class ComplEx(Model):
-    def __init__(self, ent_tot, rel_tot, dim = 100):
+    def __init__(self, ent_tot, rel_tot, dim=100):
         super(ComplEx, self).__init__(ent_tot, rel_tot)
 
         self.dim = dim
@@ -49,8 +50,8 @@ class ComplEx(Model):
         t_im = self.ent_im_embeddings(batch_t)
         r_re = self.rel_re_embeddings(batch_r)
         r_im = self.rel_im_embeddings(batch_r)
-        regul = (torch.mean(h_re ** 2) + 
-                 torch.mean(h_im ** 2) + 
+        regul = (torch.mean(h_re ** 2) +
+                 torch.mean(h_im ** 2) +
                  torch.mean(t_re ** 2) +
                  torch.mean(t_im ** 2) +
                  torch.mean(r_re ** 2) +
