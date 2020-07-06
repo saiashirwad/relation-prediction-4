@@ -104,7 +104,7 @@ class KGLayer(nn.Module):
                 ent_embed[triplets[:, 2]]
             ), dim=1)
 
-        # h = self.input_drop(h)
+        h = self.input_drop(h)
         c = self.a(h)
         b = -F.leaky_relu(self.a_2(c))
         e_b = self.input_drop(torch.exp(b))
@@ -129,8 +129,8 @@ class KGLayer(nn.Module):
             index = triplets[:, 1]
             h_rel = scatter(temp1, index=index, dim=0, reduce="mean")
 
-        if self.concat:
-            return F.relu(h_ent), F.relu(h_rel)
+        # if self.concat:
+        #     return F.relu(h_ent), F.relu(h_rel)
         return h_ent, h_rel
 
 
