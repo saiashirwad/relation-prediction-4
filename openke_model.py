@@ -94,11 +94,12 @@ class RotAtte(Model):
             rel_embed = out[1]
             rel_embed = self.rel_transform(rel_embed)
         else:
-            if self.n_heads > 1:
-                ent_embed = self.ent_transform(
-                    torch.cat([o[0] for o in out], dim=1))
-            else:
-                ent_embed, _ = out[0]
+            # if self.n_heads > 1:
+            ent_embed = self.ent_transform(
+                torch.cat([o[0] for o in out], dim=1))
+            # else:
+                # ent_embed, _ = out[0]
+            # ent_embed = self.ent_transform([o[0] for o in out], dim=1)
             rel_embed = self.rel_transform(
                 torch.cat([o[1] for o in out], dim=1))
 

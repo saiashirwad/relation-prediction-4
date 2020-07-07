@@ -1,1 +1,26 @@
-{"negative_rate": 200, "in_dim": 50, "out_dim": 50, "dataset": "WN18RR", "batch_size": 10000, "sampling_mode": "cross", "n_heads": 1, "n_layers": 1, "opt_method": "adam", "scatter": false, "lrs": [[2e-05, 1]], "result": [0.00044510175939649343, 20439.9921875, 0.0006381620769388974, 0.00047862157225608826, 0.0], "loss": "margin"}
+{
+    "negative_rate": 200,
+    "in_dim": 50,
+    "out_dim": 50,
+    "dataset": "WN18RR",
+    "batch_size": 10000,
+    "sampling_mode": "cross",
+    "n_heads": 1,
+    "n_layers": 1,
+    "opt_method": "adam",
+    "scatter": false,
+    "lrs": [
+        [
+            2e-05,
+            1
+        ]
+    ],
+    "result": [
+        0.00044510175939649343,
+        20439.9921875,
+        0.0006381620769388974,
+        0.00047862157225608826,
+        0.0
+    ],
+    "loss": "margin"
+}

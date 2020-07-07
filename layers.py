@@ -124,7 +124,10 @@ class KGLayer(nn.Module):
 
         if not self.scatter:
             # h_rel = self.rel_transform(self.rel_embed.weight)
-            h_rel = self.rel_embed.weight 
+            if rel_embed is not None:
+                h_rel = rel_embed
+            else:
+                h_rel = self.rel_embed.weight 
         else:
             index = triplets[:, 1]
             h_rel = scatter(temp1, index=index, dim=0, reduce="mean")
